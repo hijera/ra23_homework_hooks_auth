@@ -4,9 +4,7 @@ import AuthForm from "./AuthForm";
 import LogoutForm from "./LogoutForm";
 import AuthContext from "../contexts/AuthContext";
 
-Auth.propTypes = {
-
-};
+Auth.propTypes = {};
 
 function Auth(props) {
     const {handleLogin, handleLogout, token, profile} = useContext(AuthContext);
@@ -14,7 +12,8 @@ function Auth(props) {
         <>
             {!token && <AuthForm/>}
             {token && <LogoutForm/>}
-            </>
-            );
-    }
+        </>
+    );
+}
+
 export default Auth;
